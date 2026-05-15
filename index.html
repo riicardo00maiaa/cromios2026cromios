@@ -1,24 +1,34 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="pt">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cromos Caralho 2026 </title>
 
+  <!-- TÍTULO DA ABA -->
+  <title>Coleção Cromos</title>
+
+  <!-- FONTES -->
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-  <!-- ====== CABEÇALHO ====== -->
+  <!-- ===================================================== -->
+  <!-- HEADER -->
+  <!-- ===================================================== -->
+
   <header>
+
     <div>
       <div class="logo">Mundial 2026</div>
-      <div class="subtitle">CROMOS CARALHO</div>
+      <div class="subtitle">COLEÇÃO DE CROMOS</div>
     </div>
 
     <div class="stats-bar">
+
       <div class="stat">
         <div class="stat-val green" id="s-have">0</div>
         <div class="stat-lbl">Tenho</div>
@@ -35,6 +45,7 @@
       </div>
 
       <div class="progress-bar-wrap">
+
         <div class="progress-label">
           <span>Progresso</span>
           <span id="s-pct">0%</span>
@@ -43,12 +54,19 @@
         <div class="progress-bar">
           <div class="progress-fill" id="progress-fill"></div>
         </div>
+
       </div>
+
     </div>
+
   </header>
 
-  <!-- ====== CONTROLOS ====== -->
+  <!-- ===================================================== -->
+  <!-- CONTROLOS -->
+  <!-- ===================================================== -->
+
   <div class="controls">
+
     <input
       type="text"
       id="search"
@@ -56,15 +74,24 @@
       oninput="filterTable()"
     >
 
-    <button class="filter-btn active" onclick="setFilter('all', this)">
+    <button
+      class="filter-btn active"
+      onclick="setFilter('all', this)"
+    >
       Todos
     </button>
 
-    <button class="filter-btn" onclick="setFilter('missing', this)">
+    <button
+      class="filter-btn"
+      onclick="setFilter('missing', this)"
+    >
       Só em falta
     </button>
 
-    <button class="filter-btn" onclick="setFilter('complete', this)">
+    <button
+      class="filter-btn"
+      onclick="setFilter('complete', this)"
+    >
       Completos
     </button>
 
@@ -75,37 +102,53 @@
     <button class="reset-btn" onclick="resetAll()">
       Reiniciar tudo
     </button>
+
   </div>
 
-  <!-- ====== CONTEÚDO ====== -->
+  <!-- ===================================================== -->
+  <!-- MAIN -->
+  <!-- ===================================================== -->
+
   <main>
 
+    <!-- TÍTULO -->
     <div class="section-title">
       Seleções — Cromos 1 a 20
     </div>
 
-    <!-- SCROLL HORIZONTAL -->
+    <!-- WRAP COM SCROLL -->
     <div class="table-wrap">
 
       <table id="main-table">
 
         <thead>
+
           <tr id="header-row">
+
             <th>País</th>
-            <th class="th-have">Têm</th>
+            <th class="th-have">Tenho</th>
             <th class="th-miss">Faltam</th>
+
+            <!-- NÚMEROS 1-20 GERADOS PELO JS -->
+
           </tr>
+
         </thead>
 
         <tbody id="tbody">
-          <!-- GERADO PELO JS -->
+
+          <!-- LINHAS GERADAS PELO JS -->
+
         </tbody>
 
       </table>
 
     </div>
 
-    <!-- ====== FWC ====== -->
+    <!-- ================================================= -->
+    <!-- FWC -->
+    <!-- ================================================= -->
+
     <div class="fwc-section">
 
       <div class="section-title">
@@ -113,20 +156,29 @@
       </div>
 
       <div class="fwc-grid" id="fwc-grid">
+
         <!-- GERADO PELO JS -->
+
       </div>
 
     </div>
 
   </main>
 
+  <!-- ===================================================== -->
+  <!-- FOOTER -->
+  <!-- ===================================================== -->
+
   <footer>
     Clica nos cromos para alternar entre ✓ e ✕
     &nbsp;·&nbsp;
-    Guardado automático no browser
+    Progresso guardado automaticamente no browser
   </footer>
 
-  <!-- JS -->
+  <!-- ===================================================== -->
+  <!-- JAVASCRIPT -->
+  <!-- ===================================================== -->
+
   <script src="js/data.js"></script>
   <script src="js/state.js"></script>
   <script src="js/ui.js"></script>
